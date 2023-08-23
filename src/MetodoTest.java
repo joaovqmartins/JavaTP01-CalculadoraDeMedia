@@ -13,8 +13,8 @@ class MetodoTest {
         double maiorNota = Double.MIN_VALUE;
 
         for (int i = 1; i <= quantidadeAlunos; i++) {
-            System.out.print("Digite o nome do " + quantidadeAlunos + "º aluno: ");
-            String nomeAluno = scanner.nextLine();
+            System.out.print("Digite o nome do " + i + "º aluno: ");
+            String nomeAluno = scanner.next();
 
             System.out.print("Digite a nota do " + i + "º aluno: ");
             double notaAluno = scanner.nextDouble();
@@ -33,7 +33,7 @@ class MetodoTest {
         double media = CalculadoraDeMedias.calcularMedia(somaNotas, quantidadeAlunos);
 
         System.out.println("A média da turma é " + media);
-
+        System.out.println("A Maior nota da turma é: " + maiorNota + ", do aluno " + alunoMaiorNota);
         scanner.close();
     }
 }
